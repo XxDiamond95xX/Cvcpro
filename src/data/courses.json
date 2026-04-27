@@ -1,0 +1,45 @@
+{
+  "modules": [
+    {
+      "id": "m1_fondamentaux",
+      "title": "Le Cycle Frigorifique Fondamental",
+      "chapters": [
+        {
+          "id": "c1_intro",
+          "title": "Les 4 temps du froid",
+          "content": "Le cycle frigorifique repose sur la thermodynamique pour transférer la chaleur d'une source froide vers une source chaude. Il est composé de 4 organes principaux : le compresseur, le condenseur, le détendeur et l'évaporateur.",
+          "focus_component": "all",
+          "simulation_preset": { "bp": 4.5, "hp": 18.2, "sh": 5, "sc": 3 }
+        },
+        {
+          "id": "c2_compression",
+          "title": "1. La Compression",
+          "content": "Le compresseur aspire le fluide à l'état de vapeur basse pression / basse température. Il le comprime, ce qui élève fortement sa pression et sa température. C'est l'étape qui consomme l'énergie mécanique (W).\n\nÀ retenir : Le fluide en sortie doit impérativement être gazeux pour ne pas casser la mécanique.",
+          "focus_component": "compressor",
+          "simulation_preset": { "bp": 4.5, "hp": 22.0, "sh": 8, "sc": 3 }
+        },
+        {
+          "id": "c3_condensation",
+          "title": "2. La Condensation",
+          "content": "Le gaz chaud et haute pression entre dans le condenseur. Au contact de l'air extérieur (ou de l'eau), il cède sa chaleur et se liquéfie.\n\nLe Sous-refroidissement (SR) : C'est la différence entre la température de condensation lue au manomètre et la température réelle du liquide en sortie.",
+          "focus_component": "condenser",
+          "simulation_preset": { "bp": 4.5, "hp": 18.2, "sh": 5, "sc": 8 }
+        },
+        {
+          "id": "c4_detente",
+          "title": "3. La Détente",
+          "content": "Le détendeur (ou organe de détente) réduit brutalement la pression du liquide frigorigène. Cette chute de pression provoque une vaporisation partielle et un fort abaissement de la température.\n\nC'est l'étape clé qui crée le froid : le fluide sort du détendeur à basse pression et basse température.",
+          "focus_component": "expansion",
+          "simulation_preset": { "bp": 3.5, "hp": 18.2, "sh": 5, "sc": 3 }
+        },
+        {
+          "id": "c5_evaporation",
+          "title": "4. L'Évaporation",
+          "content": "Le fluide froid et biphasique entre dans l'évaporateur. Il absorbe la chaleur de l'air intérieur (ou de l'eau glacée), ce qui provoque son évaporation complète.\n\nLa Surchauffe (SH) : C'est la différence entre la température d'ébullition et la température réelle du gaz en sortie d'évaporateur. Elle garantit que le fluide est bien gazeux avant d'entrer dans le compresseur.",
+          "focus_component": "evaporator",
+          "simulation_preset": { "bp": 4.5, "hp": 18.2, "sh": 10, "sc": 3 }
+        }
+      ]
+    }
+  ]
+}
